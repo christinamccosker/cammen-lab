@@ -1,5 +1,5 @@
 ##### Purpose ####
-# This script is to provide an introduction to E coding for beginners
+# This script is to provide an introduction to R coding for beginners
 
 
 #### Co-Authors ####
@@ -11,7 +11,7 @@
 
 #### Coding Basics ####
 
-# This document is a script, it is essentially a "word doc" full of code in R langauge that you can run
+# This document is a script, it is essentially a "word doc" full of code in R language that you can run
 # Use separate scripts for different analyses, research projects or questions, etc.
 
 # This is a hashtag that makes your line of text a "comment" in R, this is text that you can write to
@@ -20,12 +20,15 @@
 # read in data, and name it "bycatch_data" (or change it to something else :)
 bycatch_data <- read.csv("introduction_to_r/data/Bycaught Sample Inventory - Subsampled Fall 2023.csv", header = TRUE)
 
+#This imports your data, creating an object in your R environment. 
+    #If you can see your environment tab, you should see the new object appear 
+#In our case the data is in a dataframe, which looks essentially like a spreadsheet
 
 #### Checking the data ####
 # various ways of previewing data  
 head(bycatch_data) #see the first 6 lines
 tail(bycatch_data) #see the last 6 lines
-str(bycatch_data) #view the data structure 
+str(bycatch_data) #view the data structure (e.g., what your columns are and what type of variable they hold)
 #View(bycatch_data) #pull up the whole data frame in a new window
 summary(bycatch_data) #see a summary of each data column
 colnames(bycatch_data) #see the column names
