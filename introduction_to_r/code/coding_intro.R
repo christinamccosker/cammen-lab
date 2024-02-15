@@ -71,7 +71,7 @@ bycatch_data_clean <- bycatch_data
 # it just means -- take the data, and then subject it to the next command
 bycatch_data_clean <- bycatch_data |> 
   mutate(Species = gsub("Pv", "PV", Species)) 
-  #here we use mutate to manipulate the data frame. We are replacing "Pv" with "PV" in the species column. 
+  #here we use the mutate function to manipulate the data frame. We are replacing "Pv" with "PV" in the species column. 
   #we can check if it worked:
   unique(bycatch_data_clean$Species)
 
@@ -109,4 +109,15 @@ ggplot(fishery_summary, aes(x=Fishery, y=count, fill = Species)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   labs(y="number of bycaught seals recorded", title = "seal bycatch by fishery 2023")
   
-
+#Notes about ggplot (this could go wherever or just be talked through)
+  #ggplot works by layering elements of a graph, and that makes it very fun and customizable! 
+  #There are two essential pieces: ggplot() + geom_something()
+  #In the ggplot() parentheses, we identify the object that holds our data, and designate the x and y axes as well as visual elements like what variable we want the colors to correspond to
+  #The geom_something element tells it what kind of plot we are making (the geometry)
+      #In our case, we are making a bar plot so we give it geom_bar
+      #Other options include geom_boxplot, geom_point, or geom_line
+      #Some geometries might have additional pieces to fill in
+        #Like in our case we add stat="identity" to make the height of our bar be our y variable 
+  #We can then keep layering to make the graph extra nice looking
+    #We added some grouping to our bars with position = "dodge"
+    #We also chose our colors, added a theme (notice the background change), and added labels/titles
