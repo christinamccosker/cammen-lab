@@ -12,10 +12,52 @@
 #### Coding Basics ####
 
 # This document is a script, it is essentially a "word doc" full of code in R language that you can run
-# Use separate scripts for different analyses, research projects or questions, etc.
+# Use separate scripts for different analyses, research projects or questions, etc. 
 
 # This is a hashtag that makes your line of text a "comment" in R, this is text that you can write to
 # annotate your script and take notes - anything you don't want run as code.
+# They can also be used to make an outline of your script, so you can easily navigate through.
+
+# When you want to submit a line of code, you use ctrl-Enter, or type directly in the "Console"
+# Example - R can be used to carry out simple mathematical operations
+4+5
+10/5
+
+# Things to note:
+## R doesn't like spaces in file names and variable names - use things like _ or - instead
+
+
+#### Data Structures ####
+# There are different ways your data can be stored in R
+
+# Define a vector "hello" with a number (<- means "assign", you can also use =)
+# Vector is the basic unit of info in R
+hello <- 1
+hello=1
+  # variable will show up under "Values" with a 1
+print(hello)
+  # this prints what is in the vector to the Console
+
+# You can use c() (c=concatenate) to create a vector of multiple numbers
+hello <- c(1,2,3)
+  # now you can see that in your vector "hello", the numbers 1-3 are stored as numbers (num)
+
+# R defines numbers/text differently. You can have numbers, as above, or:
+# characters (chr)
+hello2 <- c("green", "purple")
+
+# logical (logi, these are binary data)
+hello3 <- c(TRUE, FALSE)
+
+# you can also convert from one form to another, like number to an integer
+hello <- as.integer(hello)
+  # now hello shows up in your environment with "int"
+
+hello2 <- as.factor(hello2)
+  # now hello2 shows up as Factor with 2 levels
+
+
+#### Examples with Data ####
 
 # read in data, and name it "bycatch_data" (or change it to something else :)
 bycatch_data <- read.csv("introduction_to_r/data/Bycaught Sample Inventory - Subsampled Fall 2023.csv", header = TRUE)
