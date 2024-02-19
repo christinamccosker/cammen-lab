@@ -28,33 +28,6 @@
 
 
 #### Data Structures ####
-# There are different ways your data can be stored in R
-
-# Define a vector "hello" with a number (<- means "assign", you can also use =)
-# Vector is the basic unit of info in R
-hello <- 1
-hello=1
-  # variable will show up under "Values" with a 1
-print(hello)
-  # this prints what is in the vector to the Console
-
-# You can use c() (c=concatenate) to create a vector of multiple numbers
-hello <- c(1,2,3)
-  # now you can see that in your vector "hello", the numbers 1-3 are stored as numbers (num)
-
-# R defines numbers/text differently. You can have numbers, as above, or:
-# characters (chr)
-hello2 <- c("green", "purple")
-
-# logical (logi, these are binary data)
-hello3 <- c(TRUE, FALSE)
-
-# you can also convert from one form to another, like number to an integer
-hello <- as.integer(hello)
-  # now hello shows up in your environment with "int"
-
-hello2 <- as.factor(hello2)
-  # now hello2 shows up as Factor with 2 levels
 
 
 
