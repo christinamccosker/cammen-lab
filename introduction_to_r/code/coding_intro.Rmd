@@ -33,7 +33,7 @@ You can also use them to create an outline of your script to easily navigate thr
 ```
 
 ### Basic Coding
-To submit a line of code, use "Ctrl-Enter". This sends your line of code from your script to the Console.  
+To submit a line of code, use "Ctrl-Enter" or "Command-Enter". This sends your line of code from your script to the Console.  
 Alternatively, you can also type your code into the Console. Try submitting/typing the following matematical functions:
 ```{r}
 4+5
@@ -97,7 +97,7 @@ Here we will read in metadata on the bycaught seal skin samples you have all wor
 
 When you import datasheets, you need to name it something in R. Here we will name it "bycatch-data". Be conscientious and purposeful when naming things in R, or it can get confusing. 
 ```{r}
-bycatch_data <- read.csv("C:/Users/christina_m/Documents/R/Projects/cammen-lab/introduction_to_r/data/BycaughtSampleInventorySubsampled-Fall2023.csv", header = TRUE)
+bycatch_data <- read.csv("./introduction_to_r/data/BycaughtSampleInventorySubsampled-Fall2023.csv", header = TRUE)
 
 # header = TRUE means that the first line of our csv file contains column headers.
 ```
